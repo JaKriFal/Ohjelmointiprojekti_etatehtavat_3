@@ -17,4 +17,10 @@ public class Tapahtumalista {
     public ArrayList<Tapahtuma> palautaLista() {
         return this.tapahtumat;
     }
+
+    public void tulostaTapahtumat() {
+        for (Tapahtuma i : this.tapahtumat) {
+            System.out.println(i);
+        }
+    }
 }

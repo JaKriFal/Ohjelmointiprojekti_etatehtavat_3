@@ -18,7 +18,7 @@ public class Kello {
     }
 
     public void advanceSystemTime(float amount) {
-        SystemTime=+amount;
+        SystemTime += amount;
     }
 
 }

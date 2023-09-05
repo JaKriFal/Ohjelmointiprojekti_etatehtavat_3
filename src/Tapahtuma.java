@@ -1,22 +1,24 @@
 public class Tapahtuma {
-    private String nimi;
+    private Asiakas asiakas;
     private float saapumisaika;
+    private TapahtumanTyyppi tyyppi;
 
-    public Tapahtuma(String nimi, float aika) {
-        this.nimi = nimi;
+    public Tapahtuma(Asiakas asiakas, float aika, TapahtumanTyyppi tyyppi) {
+        this.asiakas = asiakas;
         this.saapumisaika = aika;
+        this.tyyppi = tyyppi;
     }
 
     public float getArrival() {
         return this.saapumisaika;
     }
 
-    public String getNimi() {
-        return this.nimi;
+    public Asiakas getAsiakas() {
+        return this.asiakas;
     }
 
     //laitoin huvikseni toStringinkin tänne :P
     @Override public String toString() {
-        return "Asiakkaan nimi on" + this.nimi + " ja saapumisaika " + this.saapumisaika;
+        return "Asiakkaan nimi on " + this.asiakas.getNimi() + " ja saapumisaika " + this.saapumisaika;
     }
 }
